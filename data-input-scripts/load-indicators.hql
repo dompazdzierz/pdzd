@@ -1,1 +1,0 @@
-LOAD DATA INPATH '/tmp/hadoop/indicators.csv' OVERWRITE INTO TABLE IndicatorsTemp;
