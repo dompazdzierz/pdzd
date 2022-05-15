@@ -13,4 +13,4 @@ CREATE TABLE IF NOT EXISTS TradeDataTemp (t int, k string, i int, j int, v doubl
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY ';';
 
-CREATE TABLE IF NOT EXISTS CountryCodes (Alpha3Code string, numeric string);
+CREATE TABLE IF NOT EXISTS CountryCodes (Alpha3Code string, NumericCode string);
