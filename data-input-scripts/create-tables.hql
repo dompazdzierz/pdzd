@@ -28,11 +28,11 @@ FIELDS TERMINATED BY ',';
 
 CREATE TABLE IF NOT EXISTS TradeData (t int, k string, i int, j int, v double, q double)
 ROW FORMAT DELIMITED 
-FIELDS TERMINATED BY ';';
+FIELDS TERMINATED BY ',';
 
 CREATE TABLE IF NOT EXISTS TradeDataTemp (t int, k string, i int, j int, v double, q double)
 ROW FORMAT DELIMITED 
-FIELDS TERMINATED BY ';';
+FIELDS TERMINATED BY ',';
 
 CREATE TABLE IF NOT EXISTS CountryCodes (Alpha3Code string, NumericCode string)
 ROW FORMAT DELIMITED 
