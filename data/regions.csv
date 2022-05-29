@@ -6,7 +6,7 @@ ASM,East Asia & Pacific
 ADO,Europe & Central Asia
 AGO,Sub-Saharan Africa
 ATG,Latin America & Caribbean
-ARB,
+ARB,Middle East & North Africa
 ARG,Latin America & Caribbean
 ARM,Europe & Central Asia
 ABW,Latin America & Caribbean
@@ -34,10 +34,10 @@ CPV,Sub-Saharan Africa
 KHM,East Asia & Pacific
 CMR,Sub-Saharan Africa
 CAN,North America
-CSS,
+CSS,Latin America & Caribbean
 CYM,Latin America & Caribbean
 CAF,Sub-Saharan Africa
-CEB,
+CEB,Europe & Central Asia
 TCD,Sub-Saharan Africa
 CHI,Europe & Central Asia
 CHL,Latin America & Caribbean
@@ -58,8 +58,8 @@ DNK,Europe & Central Asia
 DJI,Middle East & North Africa
 DMA,Latin America & Caribbean
 DOM,Latin America & Caribbean
-EAS,
-EAP,
+EAS,East Asia & Pacific
+EAP,East Asia & Pacific
 ECU,Latin America & Caribbean
 EGY,Middle East & North Africa
 SLV,Latin America & Caribbean
@@ -67,14 +67,14 @@ GNQ,Sub-Saharan Africa
 ERI,Sub-Saharan Africa
 EST,Europe & Central Asia
 ETH,Sub-Saharan Africa
-EMU,
-ECS,
-ECA,
-EUU,
+EMU,Europe & Central Asia
+ECS,Europe & Central Asia
+ECA,Europe & Central Asia
+EUU,Europe & Central Asia
 FRO,Europe & Central Asia
 FJI,East Asia & Pacific
 FIN,Europe & Central Asia
-FCS,
+FCS,Fragile and conflict affected situations
 FRA,Europe & Central Asia
 PYF,East Asia & Pacific
 GAB,Sub-Saharan Africa
@@ -90,10 +90,10 @@ GIN,Sub-Saharan Africa
 GNB,Sub-Saharan Africa
 GUY,Latin America & Caribbean
 HTI,Latin America & Caribbean
-HPC,
-HIC,
-NOC,
-OEC,
+HPC,Heavily indebted poor countries (HIPC)
+HIC,High income
+NOC,High income: nonOECD
+OEC,High income: OECD
 HND,Latin America & Caribbean
 HKG,East Asia & Pacific
 HUN,Europe & Central Asia
@@ -117,19 +117,19 @@ KSV,Europe & Central Asia
 KWT,Middle East & North Africa
 KGZ,Europe & Central Asia
 LAO,East Asia & Pacific
-LCN,
-LAC,
+LCN,Latin America & Caribbean (all income levels)
+LAC,Latin America & Caribbean (developing only)
 LVA,Europe & Central Asia
-LDC,
+LDC,Least developed countries: UN classification
 LBN,Middle East & North Africa
 LSO,Sub-Saharan Africa
 LBR,Sub-Saharan Africa
 LBY,Middle East & North Africa
 LIE,Europe & Central Asia
 LTU,Europe & Central Asia
-LMY,
-LIC,
-LMC,
+LMY,Low & middle income
+LIC,Low income
+LMC,Lower middle income
 LUX,Europe & Central Asia
 MAC,East Asia & Pacific
 MKD,Europe & Central Asia
@@ -144,9 +144,9 @@ MRT,Sub-Saharan Africa
 MUS,Sub-Saharan Africa
 MEX,Latin America & Caribbean
 FSM,East Asia & Pacific
-MEA,
-MNA,
-MIC,
+MEA,Middle East & North Africa (all income levels)
+MNA,Middle East & North Africa (developing only)
+MIC,Middle income
 MDA,Europe & Central Asia
 MCO,Europe & Central Asia
 MNG,East Asia & Pacific
@@ -162,13 +162,13 @@ NZL,East Asia & Pacific
 NIC,Latin America & Caribbean
 NER,Sub-Saharan Africa
 NGA,Sub-Saharan Africa
-NAC,
+NAC,North America
 MNP,East Asia & Pacific
 NOR,Europe & Central Asia
-OED,
+OED,OECD members
 OMN,Middle East & North Africa
-OSS,
-PSS,
+OSS,Other small states
+PSS,Pacific island small states
 PAK,South Asia
 PLW,East Asia & Pacific
 PAN,Latin America & Caribbean
@@ -195,11 +195,11 @@ SGP,East Asia & Pacific
 SXM,Latin America & Caribbean
 SVK,Europe & Central Asia
 SVN,Europe & Central Asia
-SST,
+SST,Small states
 SLB,East Asia & Pacific
 SOM,Sub-Saharan Africa
 ZAF,Sub-Saharan Africa
-SAS,
+SAS,South Asia
 SSD,Sub-Saharan Africa
 ESP,Europe & Central Asia
 LKA,South Asia
@@ -207,8 +207,8 @@ KNA,Latin America & Caribbean
 LCA,Latin America & Caribbean
 MAF,Latin America & Caribbean
 VCT,Latin America & Caribbean
-SSF,
-SSA,
+SSF,Sub-Saharan Africa (all income levels)
+SSA,Sub-Saharan Africa (developing only)
 SDN,Sub-Saharan Africa
 SUR,Latin America & Caribbean
 SWZ,Sub-Saharan Africa
@@ -234,7 +234,7 @@ UKR,Europe & Central Asia
 ARE,Middle East & North Africa
 GBR,Europe & Central Asia
 USA,North America
-UMC,
+UMC,Upper middle income
 URY,Latin America & Caribbean
 UZB,Europe & Central Asia
 VUT,East Asia & Pacific
@@ -242,7 +242,7 @@ VEN,Latin America & Caribbean
 VNM,East Asia & Pacific
 VIR,Latin America & Caribbean
 WBG,Middle East & North Africa
-WLD,
+WLD,World
 YEM,Middle East & North Africa
 ZMB,Sub-Saharan Africa
 ZWE,Sub-Saharan Africa
