@@ -1,4 +1,4 @@
-INSERT INTO WTD_TMP1 (
+INSERT OVERWRITE TABLE WTD_TMP1 
     SELECT 
         wd.t AS Year, 
         wd.k AS HsCode, 
@@ -11,6 +11,5 @@ INSERT INTO WTD_TMP1 (
     FROM 
         TradeData AS wd 
         JOIN CountryCodes AS cc ON wd.i = cc.NumericCode  
-        JOIN CountryCodes AS cc2 ON wd.j == cc2.NumericCode 
-)
+        JOIN CountryCodes AS cc2 ON wd.j == cc2.NumericCode;
 
