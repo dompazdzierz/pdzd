@@ -8,7 +8,9 @@ INSERT INTO WTD_TMP1 (
         wd.v AS Value, 
         wd.q AS Volume, 
         wd.v/wd.q AS PriceTon 
-    FROM (TradeData wd JOIN CountryCodes cc ON wd.i = cc.NumericCode) wdcc 
-        JOIN CountryCodes cc2 ON wdcc.j == cc2.NumericCode 
+    FROM 
+        TradeData AS wd 
+        JOIN CountryCodes AS cc ON wd.i = cc.NumericCode  
+        JOIN CountryCodes AS cc2 ON wd.j == cc2.NumericCode 
 )
 
