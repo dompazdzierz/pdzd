@@ -20,7 +20,8 @@ DROP TABLE IF EXISTS TARGET;
 
 CREATE TABLE IF NOT EXISTS Indicators (CountryName string, CountryCode string, IndicatorName string, IndicatorCode string, Year string, Value string)
 ROW FORMAT DELIMITED 
-FIELDS TERMINATED BY ',';
+FIELDS TERMINATED BY ','
+tblproperties("skip.header.line.count"="1");
 
 CREATE TABLE IF NOT EXISTS IndicatorsTemp (CountryName string, CountryCode string, IndicatorName string, IndicatorCode string, Year string, Value string)
 ROW FORMAT DELIMITED 
@@ -28,7 +29,8 @@ FIELDS TERMINATED BY ',';
 
 CREATE TABLE IF NOT EXISTS TradeData (t int, k string, i int, j int, v double, q double)
 ROW FORMAT DELIMITED 
-FIELDS TERMINATED BY ',';
+FIELDS TERMINATED BY ','
+tblproperties("skip.header.line.count"="1");
 
 CREATE TABLE IF NOT EXISTS TradeDataTemp (t int, k string, i int, j int, v double, q double)
 ROW FORMAT DELIMITED 
@@ -36,11 +38,13 @@ FIELDS TERMINATED BY ',';
 
 CREATE TABLE IF NOT EXISTS CountryCodes (Alpha3Code string, NumericCode string)
 ROW FORMAT DELIMITED 
-FIELDS TERMINATED BY ',';
+FIELDS TERMINATED BY ','
+tblproperties("skip.header.line.count"="1");
 
 CREATE TABLE IF NOT EXISTS Regions (Alpha3Code string, Region string)
 ROW FORMAT DELIMITED 
-FIELDS TERMINATED BY ',';
+FIELDS TERMINATED BY ','
+tblproperties("skip.header.line.count"="1");
 
 CREATE TABLE IF NOT EXISTS WTD_TMP1 (Year string, HsCode string, HsGroup string, CountryImporter string, CountryExporter string, Value double, Volume double, PriceTon double);
 CREATE TABLE IF NOT EXISTS WTD_TMP2 (Year string, HsCode string, AvgPriceTon double);
