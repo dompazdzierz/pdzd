@@ -10,7 +10,7 @@ SELECT
     Volume,
     PriceTon,
     TransactionProfitability,
-    wtdt3.Region as RegionExporter,
-    wtdt3.DevelopmentIndicator as DevelopmentIndicator
+    wdi1.Region as RegionExporter,
+    wdi1.DevelopmentIndicator as DevelopmentIndicator
 FROM WDI_TMP1 wdi1
     JOIN WTD_TMP3 wtdt3 on (wdi1.Year = wtdt3.Year and wdi1.CountryCode = wtdt3.CountryExporter)
