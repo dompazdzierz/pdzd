@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS WTD_TMP2 (Year string, HsCode string, AvgPriceTon dou
 CREATE TABLE IF NOT EXISTS WTD_TMP3 (Year string, HsCode string, HsGroup string, CountryImporter string, CountryExporter string, Value double, Volume double, PriceTon double, TransactionProfitability int);
 CREATE TABLE IF NOT EXISTS WTD_TMP4 (HsCode string, AvgPriceTonAllYears double);
 CREATE TABLE IF NOT EXISTS WTD_TMP5 (HsCode string, ProductTier int);
-CREATE TABLE IF NOT EXISTS WDI_TMP1 (Year string, CountryCode string, DevelopmentIndicator double);
+CREATE TABLE IF NOT EXISTS WDI_TMP1 (Year string, CountryCode string, Region string, DevelopmentIndicator double);
 CREATE TABLE IF NOT EXISTS MIX_TMP1 (Year string, HsCode string, HsGroup string, CountryImporter string, CountryExporter string, Value double, Volume double, PriceTon double, TransactionProfitability int, RegionExporter string, DevelopmentIndicator double);
 CREATE TABLE IF NOT EXISTS MIX_TMP2 (Year string, CountryExporter string, RegionExporter string, ValueSum double, VolumeSum double);
 CREATE TABLE IF NOT EXISTS MIX_TMP3 (Year string, HsCode string, HsGroup string, CountryImporter string, CountryExporter string, Value double, Volume double, PriceTon double, TransactionProfitability int, RegionExporter string, DevelopmentIndicator double, AreaExportValueTier int, AreaExportVolumeTier int);
