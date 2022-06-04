@@ -27,3 +27,16 @@ SELECT
         END)
     END) AS AreaExportVolumeTier
 FROM MIX_TMP1 mixt1;
+
+//TODO -> some test sqls below
+
+select 
+	tmp21.Year, 
+	tmp21.RegionExporter, 
+	RANK() OVER (ORDER BY tmp21.ValueSum DESC)
+	from MIX_TMP2 tmp21 join (select AVG(ValueSum) as RegionAvgVal, AVG(VolumeSum) as RegionAvgVol from MIX_TMP2
+group by Year, RegionExporter) tmp2 on (tmp21.RegionExporter = tmp2.RegionExporter and tmp21.Year = tmp2.Year)
+where tmp21.RegionExporter = 'East Asia & Pacific';
+
+select * from MIX_TMP2 tmp1 join (select Year, RegionExporter, AVG(ValueSum) as RegionAvgVal, AVG(VolumeSum) as RegionAvgVol from MIX_TMP2
+group by Year, RegionExporter) tmp2 on (tmp1.RegionExporter = tmp2.RegionExporter and tmp1.Year = tmp2.Year);

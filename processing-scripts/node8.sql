@@ -7,4 +7,4 @@ SELECT
     SUM(Value) as ValueSum,
     SUM(Volume) as VolumeSum
 FROM MIX_TMP1
-GROUP BY Year, CountryExporter, RegionExporter;
+GROUP BY Year, CountryExporter;

@@ -2,7 +2,7 @@ INSERT OVERWRITE TABLE WTD_TMP1
     SELECT 
         wd.t AS Year, 
         wd.k AS HsCode, 
-        SUBSTRING(wd.k, 0, 2) AS HsGroup, 
+        SUBSTRING(wd.k, 2, 2) AS HsGroup, 
         cc.Alpha3Code AS CountryImporter, 
         cc2.Alpha3Code AS CountryExporter, 
         wd.v AS Value, 
