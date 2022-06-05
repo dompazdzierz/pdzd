@@ -12,31 +12,24 @@ SELECT
     TransactionProfitability,
     mixt1.RegionExporter AS RegionExporter,
     DevelopmentIndicator,
-    (CASE WHEN (Value / (Select MAX(Value) from MIX_TMP1 WHERE mixt1.RegionExporter = RegionExporter) > 0.95)
-        THEN 1
-        ELSE (CASE WHEN (Value / (Select MAX(Value) from MIX_TMP1 WHERE mixt1.RegionExporter = RegionExporter) > 0.80)
-            THEN 2
-            ELSE 3
-        END)
+    (CASE WHEN ValueRank < 0.05 THEN 1
+        ELSE (CASE WHEN ValueRank < 0.15 THEN 2
+            ELSE (CASE WHEN ValueRank < 0.30 THEN 3
+            ELSE (CASE WHEN ValueRank < 0.55 THEN 4
+            ELSE 5 END) END) END)
     END) AS AreaExportValueTier,
-    (CASE WHEN (Volume / (Select MAX(Volume) from MIX_TMP1 WHERE mixt1.RegionExporter = RegionExporter) > 0.95)
-        THEN 1
-        ELSE (CASE WHEN (Volume / (Select MAX(Volume) from MIX_TMP1 WHERE mixt1.RegionExporter = RegionExporter) > 0.80)
-            THEN 2
-            ELSE 3
-        END)
-    END) AS AreaExportVolumeTier
-FROM MIX_TMP1 mixt1;
-
-//TODO -> some test sqls below
-
-select 
+    (CASE WHEN VolumeRank < 0.05 THEN 1
+        ELSE (CASE WHEN VolumeRank < 0.15 THEN 2
+            ELSE (CASE WHEN VolumeRank < 0.30 THEN 3
+            ELSE (CASE WHEN VolumeRank < 0.55 THEN 4
+            ELSE 5 END) END) END)
+    END)  AS AreaExportVolumeTier
+FROM MIX_TMP1 mixt1
+join (select 
 	tmp21.Year, 
-	tmp21.RegionExporter, 
-	RANK() OVER (ORDER BY tmp21.ValueSum DESC)
-	from MIX_TMP2 tmp21 join (select AVG(ValueSum) as RegionAvgVal, AVG(VolumeSum) as RegionAvgVol from MIX_TMP2
-group by Year, RegionExporter) tmp2 on (tmp21.RegionExporter = tmp2.RegionExporter and tmp21.Year = tmp2.Year)
-where tmp21.RegionExporter = 'East Asia & Pacific';
-
-select * from MIX_TMP2 tmp1 join (select Year, RegionExporter, AVG(ValueSum) as RegionAvgVal, AVG(VolumeSum) as RegionAvgVol from MIX_TMP2
-group by Year, RegionExporter) tmp2 on (tmp1.RegionExporter = tmp2.RegionExporter and tmp1.Year = tmp2.Year);
+	tmp21.RegionExporter,
+	RANK() OVER (partition by tmp21.RegionExporter ORDER BY tmp21.ValueSum DESC) / tmp22.NumInRegion as ValueRank,
+	RANK() OVER (partition by tmp21.RegionExporter ORDER BY tmp21.VolumeSum DESC) / tmp22.NumInRegion as VolumeRank
+	from MIX_TMP2 tmp21
+	join (select Year, RegionExporter, COUNT(*) as NumInRegion from MIX_TMP2 group by RegionExporter, Year) tmp22 on (tmp21.RegionExporter = tmp22.RegionExporter and tmp21.Year = tmp22.Year)) tmp2All
+    on (tmp2All.Year = mixt1.Year and tmp2All.RegionExporter = mixt1.RegionExporter);
